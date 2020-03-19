@@ -2,20 +2,18 @@ import { Document } from "@govtechsg/decentralized-renderer-react-components";
 
 export interface CustomTemplateCertificate extends Document {
   name: string;
-  institute: string;
-  foo?: {
-    title: string;
+  recipient: {
+    name: string
   };
 }
 
 export const customTemplateCertificate: CustomTemplateCertificate = {
-  foo: {
-    title: "Bar is awesome"
+  name: "OpenAttestation Tutorial Certificate of Completion",
+  recipient: {
+    name: "Amy Zhang"
   },
-  name: "John Doe",
-  institute: "Institute of John Doe",
   $template: {
-    name: "custom",
+    name: "COC",
     type: "EMBEDDED_RENDERER",
     url: "http://localhost:3000"
   }
